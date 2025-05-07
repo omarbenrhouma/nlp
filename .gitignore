@@ -1,17 +1,12 @@
-# .gitignore
+# Node modules
+front/node_modules/
+front/build/
 
-# Node (React)
-node_modules/
-dist/
-build/
-
-# Python (Flask)
-venv/
+# Python virtualenv
+back/venv/
 __pycache__/
 *.pyc
 
-# VSCode & autres
-.vscode/
-.DS_Store
+# Environnement et logs
 .env
 *.log

@@ -5,3 +5,6 @@ PyMuPDF
 spacy
 scikit-learn
 Werkzeug
+Flask-Bcrypt
+Flask-JWT-Extended
+Flask-Cors

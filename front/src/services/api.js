@@ -1,25 +1,29 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:5000/api";
+// Point de base de ton API Flask :
+const API = axios.create({
+  baseURL: "http://localhost:5000/api", // Ajuste si nécessaire
+});
 
-// Entreprises
-export const addEntreprise = (data) =>
-  axios.post(`${BASE_URL}/entreprises/ajouter`, data);
+// Auth
+export const loginUser = (data) => API.post("/auth/login", data);
+export const registerUser = (data) => API.post("/auth/register", data);
 
 // Offres
-export const addOffre = (data) =>
-  axios.post(`${BASE_URL}/offres/ajouter`, data);
-
-export const getOffres = () =>
-  axios.get(`${BASE_URL}/offres`);
+export const addOffre = (data) => API.post("/offres/ajouter", data);
+export const getOffres = () => API.get("/offres");
 
 // Candidatures
 export const uploadCV = (formData) =>
-  axios.post(`${BASE_URL}/candidatures/upload`, formData, {
-    headers: {
-      "Content-Type": "multipart/form-data",
-    },
+  API.post("/candidatures/upload", formData, {
+    headers: { "Content-Type": "multipart/form-data" },
   });
 
-export const getCandidatures = () =>
-  axios.get(`${BASE_URL}/candidatures`);
+  export const getCandidaturesForOffre = (offreId) => API.get(`/offres/${offreId}/candidatures`);
+
+  export const getCandidature = (candidatureId) => 
+    API.get(`/candidatures/${candidatureId}`);
+  
+  // Quiz
+  export const generateQuiz = (candidatureId) =>
+    API.post("/quiz/generate", { candidature_id: candidatureId });

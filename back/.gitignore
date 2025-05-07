@@ -1,0 +1,75 @@
+#---------------------------------------
+# Fichiers générés par Visual Studio
+#---------------------------------------
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.csproj.user
+
+#---------------------------------------
+# Dossiers de build
+#---------------------------------------
+bin/
+obj/
+
+#---------------------------------------
+# Logs et rapports de build
+#---------------------------------------
+*.log
+TestResult/
+TestResults/
+
+#---------------------------------------
+# Paquets et dépendances
+#---------------------------------------
+# (Si vous avez un dossier packages local ou utilisez NuGet)
+packages/
+
+#---------------------------------------
+# Configuration locale
+#---------------------------------------
+appsettings.Development.json
+appsettings.*.local.json
+*.local.settings.json
+
+#---------------------------------------
+# Fichiers temporaires, cache, etc.
+#---------------------------------------
+*.tmp
+*.cache
+
+#---------------------------------------
+# Divers
+#---------------------------------------
+*.swp
+*.DS_Store
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+# Si vous avez un venv
+/venv/
+__pycache__/
+*.pyc
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+build/
+dist/
+npm-debug.log*
+yarn-error.log*
+
+# OS / IDE
+.DS_Store
+.env
+
+# Si vous avez des logs volumineux
+*.log
+# Etc.
